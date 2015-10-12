@@ -48,10 +48,12 @@
 				</section>
 				<section>
 					<h2>The Seven Stages of Bosh</h2>
+					<p>Surviving successful Bosh adoption</p>
 				</section>
 				<section>
 					<p>Chris Hedley of CloudCredo</p>
 					<p>Daniel Jones of EngineerBetter</p>
+					<aside class="notes">Number of people we've seen learn Bosh</aside>
 				</section>
 				<section>
 					<section>
@@ -60,7 +62,35 @@
 						<aside class="notes">Joke: Zero indexing</aside>
 					</section>
 					<section>
-						<h2>Learning Point</h2>
+						<h2>Powerful Automation</h2>
+						<ol>
+							<li>Create all the VMs</li>
+							<li>Keep all the VMs running</li>
+						</ol>
+						<aside class="notes">Fidelity, comparison to trad ops</aside>
+					</section>
+					<section data-background="images/learning_cliff.png" data-background-size="80%">
+					</section>
+					<section>
+						<h2>Stuff To Learn</h2>
+						<ol>
+							<li>Bosh - blobs, jobs, packages, releases, stemcells</li>
+							<li>Bash</li>
+							<li>YAML</li>
+							<li>Ruby</li>
+							<li>Networking (CIDR, anyone?)</li>
+							<li>IaaS</li>
+							<li>Golang</li>
+							<li>Monit</li>
+						</ol>
+						<aside class="notes">Our backgrounds as coders</aside>
+					</section>
+					<section>
+						<h2>Learning Points</h2>
+						<ol>
+							<li>Bosh is very powerful and does amazing things</li>
+							<li>Your team <em>needs</em> to learn all the things</li>
+						</ol>
 					</section>
 				</section>
 
@@ -69,38 +99,96 @@
 						<h2>Stage 1: Denial</h2>
 						<blockquote>&ldquo;the survivor imagines a false, preferable reality&rdquo;</blockquote>
 						<aside class="notes">
-						<ol>
-							<li>Can't be any good, website doesn't look like Terraform's...</li>
-						</ol>
-					</aside>
+							<ol>
+								<li>Why are we using a thing that no-one else does?</li>
+								<li>Is writing manifests and learning so much really the best solution?</li>
+							</ol>
+						</aside>
 					</section>
 					<section data-background="#FFFFFF" data-transition="zoom">
 						<img src="images/bosh-clam.png" width="100%" />
+						<aside class="notes">
+							<ol>
+								<li>Can't be any good, website doesn't look like Terraform's...</li>
+							</ol>
+						</aside>
 					</section>
 					<section>
-						<h2>Learning Point</h2>
+						<h2>Learning Points</h2>
+						<p>Remember that Bosh gives you:</p>
+						<ol>
+							<li>Declaration of intent</li>
+							<li>Effectively immutable</li>
+							<li>IaaS agnostic</li>
+							<li>Highly automated</li>
+							<li>Self-healing</li>
+							<li>Open source and extensible(ish)</li>
+						</ol>
+						<aside class="notes">
+							<ol>
+								<li>There isn't an easy answer - just remember what it does for you</li>
+							</ol>
+						</aside>
 					</section>
 				</section>
 
 				<section>
-						<section>
-							<h2>Stage 2: Anger</h2>
-							<blockquote>&ldquo;the survivor becomes frustrated&rdquo;</blockquote>
-						</section>
-						<section data-background="images/learning_cliff.png" data-background-size="80%">
-						</section>
-						<section>
-							<h2>Learning Point</h2>
-						</section>
+					<section>
+						<h2>Stage 2: Anger</h2>
+						<blockquote>&ldquo;the survivor becomes frustrated&rdquo;</blockquote>
+					</section>
+					<!-- Visual gags for name - screengrab of Bosh, BOSH wikipedia page, Bosch powerdrill -->
+					<section>
+						<h2>Terminology</h2>
+						<ul>
+							<li>Bosh</li>
+							<li>MicroBosh</li>
+							<li>Full Bosh?</li>
+							<li>Binary Bosh</li>
+							<li>bosh-lite</li>
+							<li>light bosh</li>
+							<li>Nise Bosh</li>
+							<li>Bosh Gen</li>
+							<li>Bosh Bootstrap</li>
+							<li>bosh-solo</li>
+							<li>traveling-bosh</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Errors</h2>
+						<ul>
+							<li>Lorem Ipsum</li>
+						</ul>
+						<aside class="notes">
+							<ol>
+								<li>Reverse engineering a blob store from MD5s - definitely anger-inducing</li>
+							</ol>
+						</aside>
+					</section>
+					<section>
+						<h2>Learning Points</h2>
+						<ol>
+							<li>Be prepared to read up</li>
+							<li>You will need to debug into many components</li>
+						</ol>
+					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Stage 3: Bargaining</h2>
 						<blockquote>&ldquo;the survivor seeks compromise&rdquo;</blockquote>
+						<aside class="notes">
+							<ol>
+								<li>Subverting Bosh mitigates its benefits - eg using Chef, replacing Monit</li>
+							</ol>
+						</aside>
 					</section>
 					<section>
-						<h2>Learning Point</h2>
+						<h2>Learning Points</h2>
+						<ol>
+							<li>Do not argue with Bosh</li>
+						</ol>
 					</section>
 				</section>
 
@@ -116,7 +204,12 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Learning Point</h2>
+						<h2>Learning Points</h2>
+						<ol>
+							<li>Same as any niche technology choice</li>
+							<li>Radiate reasons for using it</li>
+							<li>Pair on release development</li>
+						</ol>
 					</section>
 				</section>
 
@@ -126,7 +219,12 @@
 						<blockquote>&ldquo;the survivor has feelings of severe despondency and hopelessness&rdquo;</blockquote>
 					</section>
 					<section>
-						<h2>Learning Point</h2>
+						<h2>Learning Points</h2>
+						<ol>
+							<li>Tooling is not great, do not expect it</li>
+							<li>Use bosh-lite</li>
+							<li>Consider a pool of Boshes for CI</li>
+						</ol>
 					</section>
 				</section>
 
@@ -146,7 +244,12 @@
 						<aside class="notes">Must be good if it has a parody</aside>
 					</section>
 					<section>
-						<h2>Learning Point</h2>
+						<h2>Learning Points</h2>
+						<p>You now have:</p>
+						<ol>
+							<li>IaaC</li>
+							<li>A team capable of end-to-end continuous delivery</li>
+						</ol>
 					</section>
 				</section>
 
@@ -158,6 +261,7 @@
 							<ol>
 								<li>Joke: off-by-one errors</li>
 								<li>bosh.io</li>
+								<li>CCP allows zero-cost trial of releases, and downloading of them</li>
 							</ol>
 						</aside>
 					</section>
@@ -166,7 +270,11 @@
 				<section>
 					<h2>Bosh Self-Help Guide</h2>
 					<ul>
-						<li>Lorem ipsum</li>
+						<li>You can't do Bosh half-arsedly</li>
+						<li>It won't be easy, but it will be worth it</li>
+						<li>Be willing to become poly-skilled</li>
+						<li>Exploit bosh-lite for testing</li>
+						<li>Acceptance-test releases</li>
 					</ul>
 				</section>
 
