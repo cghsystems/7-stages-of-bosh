@@ -210,22 +210,30 @@
 						<p><em>Yoda - The Phantom Manifest</em></p>
 					</section>
 					<!-- Visual gags for name - screengrab of Bosh, BOSH wikipedia page, Bosch powerdrill -->
-					<section>
-						<h2>Terminology</h2>
-						<ul>
-							<li>Bosh</li>
-							<li>MicroBosh</li>
-							<li>Full Bosh?</li>
-							<li>Binary Bosh</li>
-							<li>bosh-lite</li>
-							<li>light bosh</li>
-							<li>Nise Bosh</li>
-							<li>Bosh Gen</li>
-							<li>Bosh Bootstrap</li>
-							<li>bosh-solo</li>
-							<li>traveling-bosh</li>
-						</ul>
 					</section>
+					<section tagcloud bw>
+						Bosh
+						MicroBosh
+						Full&nbsp;Bosh?
+						Binary&nbsp;Bosh
+						bosh&#8209;lite
+						light&nbsp;bosh
+						Nise&nbsp;Bosh
+						bosh&#8209;gen
+						bosh&#8209;bootstrap
+						bosh&#8209;solo
+						traveling&#8209;bosh
+ 					</section>
+ 					<section>
+						<h2>Terminology</h2>
+						<p>Jobs are made up of templates</p>
+						<p>Templates for a job are in <code>/var/vcap/jobs</code></p>
+						<aside class="notes">
+							<ol>
+								<li>Jobs in releases are templates in a manifest, which are jobs on the VM, which are instance of a job. Not to be confused with a Monit job, or a Bosh task or Bosh errand.</li>
+							</ol>
+						</aside>
+ 					</section>
 					<section>
 						<h2>Errors</h2>
 						<ul>
@@ -394,6 +402,7 @@
 
 				// Optional reveal.js plugins
 				dependencies: [
+					{ src: 'plugin/tagcloud/tagcloud.js', async: true },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
