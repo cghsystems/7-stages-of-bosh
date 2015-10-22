@@ -251,9 +251,31 @@
  					</section>
 					<section>
 						<h2>Errors</h2>
-						<ul>
-							<li>Lorem Ipsum</li>
-						</ul>
+						<pre><code class="hljs" data-trim contenteditable>
+$ bosh target
+
+[WARNING] Loading the cli took 12.4 seconds, consider cleaning your 
+gem environment
+						</code></pre>
+
+						<pre><code class="hljs" data-trim contenteditable>
+$ bosh ssh
+&hellip;
+Starting interactive shell on job ha_proxy_z1/0
+No RSA host key is known for 10.244.0.34 and you have requested strict
+checking.
+Host key verification failed.
+						</code></pre>
+
+						<pre><code>
+$ bosh deploy
+&hellip;
+Deploying
+---------
+Are you sure you want to deploy? (type 'yes' to continue): y
+Deployment canceled
+Deployment canceled
+						</code></pre>
 						<aside class="notes">
 							<ol>
 								<li>Reverse engineering a blob store from MD5s - definitely anger-inducing</li>
