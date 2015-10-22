@@ -61,8 +61,9 @@
 					<p>Daniel Jones of EngineerBetter</p>
 					<aside class="notes">
 						<ul>
+							<li>We started as Spring app developers</li>
+							<li>Seen around 40 people go on the Bosh journey</li>
 							<li>Credentials - years experience, projects</li>
-							<li>Number of developers we've seen learn Bosh from scratch</li>
 						</ul>
 					</aside>
 				</section>
@@ -72,7 +73,8 @@
 						<blockquote>&ldquo;the survivor refuses to accept that something is true or real&rdquo;</blockquote>
 						<aside class="notes">
 							<ul>
-								<li>Joke: Zero indexing</li>
+								<li>We are all engineers here, so zero-indexing made sense</li>
+								<li>People's first reaction is "does it really do all this", especially when it was new</li>
 							</ul>
 						</aside>
 					</section>
@@ -81,7 +83,8 @@
 						<blockquote>&ldquo;the ability to keep an equipment, a system or a whole industrial installation in a safe and reliable functioning condition, according to pre-defined operational requirements&rdquo;</blockquote>
 						<aside class="notes">
 							<ul>
-								<li> Does all this as well as being declarative, convergent, effectively immutable</li>
+								<li>Define operability - these are desirable features</li>
+								<li>Does all this as well as being declarative, convergent, effectively immutable</li>
 							</ul>
 						</aside>
 					</section>
@@ -95,7 +98,8 @@
 						<aside class="notes">
 							<ul>
 								<li>Bosh does amazing, magic things compared to trad ops</li>
-								<li>This is cool, so where is the shock?</li>
+								<li>DJ: Enterprise team would have taken a year of weekend releases</li>
+								<li>This is all good so far - so where is the shock?</li>
 							</ul>
 						</aside>
 					</section>
@@ -104,7 +108,7 @@
 						<aside class="notes">
 							<ul>
 								<li>DJ: Image nabbed from MMORPGs</li>
-								<li>DJ: Learning cliff main challenge in Bosh adoption</li>
+								<li>DJ: Shock comes from how many things you need to learn</li>
 							</ul>
 						</aside>
 					</section>
@@ -115,20 +119,21 @@
 							<li>Bash</li>
 							<li>YAML</li>
 							<li>Ruby</li>
-							<li>Networking (CIDR, anyone?)</li>
+							<li>Networking</li>
 							<li>IaaS</li>
 							<li>Golang</li>
 							<li>Monit</li>
 						</ol>
 						<aside class="notes">
 							<ul>
-								<li>Our backgrounds as coders</li>
-								<li>Bash for start scripts, packaging</li>
-								<li>YAML because manifests</li>
-								<li>Ruby - for CLI and inevitable debugging</li>
-								<li>Golang - new agent</li>
-								<li>Monit not like most service runners</li>
+								<li>Explain Bosh components</li>
+								<li>Bash for ctl scripts, packaging</li>
+								<li>YAML: manifests</li>
+								<li>Ruby: CLI debugging</li>
+								<li>Golang: agent</li>
+								<li>Monit: uncommon</li>
 								<li>Adds up to a lot</li>
+								<li>All this before the thing you want to deploy</li>
 							</ul>
 						</aside>
 					</section>
@@ -136,7 +141,7 @@
 						<h2>Learning Points</h2>
 						<ol>
 							<li>Bosh is very powerful and does amazing things</li>
-							<li>Your team <em>needs</em> to learn all the things</li>
+							<li>Your team <em>needs</em> to learn a lot</li>
 						</ol>
 					</section>
 				</section>
@@ -147,6 +152,7 @@
 						<blockquote>&ldquo;the survivor imagines a false, preferable reality&rdquo;</blockquote>
 						<aside class="notes">
 							<ol>
+								<li>Why haven't I heard of this?</li>
 								<li>Why are we using a thing that no-one else does?</li>
 							</ol>
 							<em>You will need that Chrome plugin enabled for the next slide...</em>
@@ -166,6 +172,7 @@
 							<ol>
 								<li>...depending on when they looked, if they search for Bosh, they'll find this</li>
 								<li>I can't use package managers, or Chef recipes</li>
+								<li>Writing releases and manifests is complicated, time consuming</li>
 								<li>Is all this work really the best idea?</li>
 							</ol>
 						</aside>
@@ -208,6 +215,13 @@
 							&rdquo;
 						</blockquote>
 						<p><em>Yoda - The Phantom Manifest</em></p>
+						<aside class="notes">
+							<ol>
+								<li>People get angry when they're frustrated</li>
+								<li>Confusion causes frustration</li>
+								<li>...So what causes this?</li>
+							</ol>
+						</aside>
 					</section>
 					<!-- Visual gags for name - screengrab of Bosh, BOSH wikipedia page, Bosch powerdrill -->
 					<section data-background-iframe="https://www.google.co.uk/search?q=bosh&oq=bosh">
@@ -217,7 +231,7 @@
 						</div>
 						<aside class="notes">
 							<ol>
-								<li>Bosh is not a basketball player, or a powerdrill</li>
+								<li>Search for Bosh, and you'll get something completely irrelevant...</li>
 							</ol>
 						</aside>
 					</section>
@@ -227,7 +241,7 @@
 						</div>
 						<aside class="notes">
 							<ol>
-								<li>Nor is Bosh BOSH</li>
+								<li>...Even if you do find a technology</li>
 							</ol>
 						</aside>
 					</section>
@@ -251,11 +265,12 @@
 						<aside class="notes">
 							<ol>
 								<li>Jobs in releases are templates in a manifest, which are jobs on the VM, which are instance of a job. Not to be confused with a Monit job, or a Bosh task or Bosh errand.</li>
+								<li>Important as it impedes building of mental model</li>
 							</ol>
 						</aside>
  					</section>
 					<section>
-						<h2>Errors</h2>
+						<h2>It's the little things&hellip;</h2>
 						<pre><code class="hljs" data-trim contenteditable>
 $ bosh target
 
@@ -283,14 +298,14 @@ Deployment canceled
 						</code></pre>
 						<aside class="notes">
 							<ol>
-								<li>Reverse engineering a blob store from MD5s - definitely anger-inducing</li>
+								<li>CH: Reverse engineering a blob store from MD5s - definitely anger-inducing</li>
 							</ol>
 						</aside>
 					</section>
 					<section>
 						<h2>Learning Points</h2>
 						<ol>
-							<li>Be prepared to read up</li>
+							<li>Be prepared to work to build a mental model of Bosh</li>
 							<li>You will need to debug into many components</li>
 						</ol>
 					</section>
@@ -349,6 +364,7 @@ Deployment canceled
 						</ol>
 						<aside class="notes">
 							<ol>
+								<li>DJ: When Dan met Chris</li>
 								<li>Testing is hard - black box acceptance tests only</li>
 								<li>Each director only does one thing at a time, CI bottlenecks</li>
 							</ol>
@@ -362,7 +378,7 @@ Deployment canceled
 						<blockquote>&ldquo;a calm, retrospective view for the survivor, and a stable set of emotions&rdquo;</blockquote>
 						<aside class="notes">
 							<ol>
-								<li>Stockholm syndrome - everyone over the cliff loves it</li>
+								<li>DJ: Stockholm syndrome - Bosh advocacy</li>
 								<li>Fundamental philosophical truths (declarative, convergent, immutable)</li>
 							</ol>
 						</aside>
