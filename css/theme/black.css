@@ -121,7 +121,7 @@ body {
 .reveal blockquote {
   quotes: none; }
 
-.reveal blockquote {
+.reveal blockquote, div .website-overlay {
   display: block;
   position: relative;
   width: 70%;
@@ -130,6 +130,11 @@ body {
   font-style: italic;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+div .website-overlay {
+  font-style: normal;
+  background: rgba(32, 32, 32, 0.90);
+}
 
 .reveal blockquote p:first-child,
 .reveal blockquote p:last-child {
