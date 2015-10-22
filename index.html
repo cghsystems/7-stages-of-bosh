@@ -259,9 +259,11 @@
 						traveling&#8209;bosh
  					</section>
  					<section>
-						<h2>Terminology</h2>
+						<h2>JOBS</h2>
 						<p>Jobs are made up of templates</p>
-						<p>Templates for a job are in <code>/var/vcap/jobs</code></p>
+						<p>One job's templates are in <code>/var/vcap/jobs</code></p>
+						<h2>SPECS</h2>
+						<p>packaging spec != job spec != rspec</p>
 						<aside class="notes">
 							<ol>
 								<li>Jobs in releases are templates in a manifest, which are jobs on the VM, which are instance of a job. Not to be confused with a Monit job, or a Bosh task or Bosh errand.</li>
@@ -270,15 +272,17 @@
 						</aside>
  					</section>
 					<section>
-						<h2>It's the little things&hellip;</h2>
-						<pre><code class="hljs" data-trim contenteditable>
+						<h2>That's annoying&hellip;</h2>
+						<pre><code class="hljs" data-trim>
 $ bosh target
 
 [WARNING] Loading the cli took 12.4 seconds, consider cleaning your 
 gem environment
 						</code></pre>
-
-						<pre><code class="hljs" data-trim contenteditable>
+ 					</section>
+					<section>
+						<h2>Wait&hellip; What?</h2>
+						<pre><code class="hljs" data-trim>
 $ bosh ssh
 &hellip;
 Starting interactive shell on job ha_proxy_z1/0
@@ -286,8 +290,10 @@ No RSA host key is known for 10.244.0.34 and you have requested strict
 checking.
 Host key verification failed.
 						</code></pre>
-
-						<pre><code>
+ 					</section>
+					<section>
+						<h2>Of course I'm sure</h2>
+						<pre><code class="hljs" data-trim>
 $ bosh deploy
 &hellip;
 Deploying
@@ -296,6 +302,7 @@ Are you sure you want to deploy? (type 'yes' to continue): y
 Deployment canceled
 Deployment canceled
 						</code></pre>
+						<p>via @xoebus</p>
 						<aside class="notes">
 							<ol>
 								<li>CH: Reverse engineering a blob store from MD5s - definitely anger-inducing</li>
