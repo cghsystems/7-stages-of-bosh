@@ -18,6 +18,7 @@ body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
+  text-shadow: .06em .06em #222;
   color: #fff; }
 
 ::selection {
@@ -46,7 +47,7 @@ body {
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
-  text-shadow: none;
+  text-shadow: .06em .06em #222;
   word-wrap: break-word; }
 
 .reveal h1 {
