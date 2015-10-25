@@ -295,6 +295,70 @@ Host key verification failed.
 						</code></pre>
  					</section>
 					<section>
+						<h2>Do not trust Bosh</h2>
+						<pre class="stretch"><code class="hljs" data-trim>
+Started prepare for update
+Started prepare for update > Delete stemcell. Done (00:00:26)
+
+Started deploy micro bosh
+Started deploy micro bosh > Unpacking stemcell. Done (00:00:00)
+Started deploy micro bosh > Uploading stemcell. Done (00:00:00)
+Started deploy micro bosh > Creating VM from ami-e1577396 light. Done (00:00:33)
+Started deploy micro bosh > Waiting for the agent
+						</code></pre>
+						<p class="fragment">Some time later...</p>
+					</section>
+					<section>
+						<h2>Do not trust Bosh</h2>
+						<pre class="stretch"><code class="hljs" data-trim>
+Started prepare for update
+Started prepare for update > Delete stemcell. Done (00:00:26)
+
+Started deploy micro bosh
+Started deploy micro bosh > Unpacking stemcell. Done (00:00:00)
+Started deploy micro bosh > Uploading stemcell. Done (00:00:00)
+Started deploy micro bosh > Creating VM from ami-e1577396 light. Done (00:00:33)
+Started deploy micro bosh > Waiting for the agent
+						</code></pre>
+						<p class="fragment">Later still...</p>
+					</section>
+					<section>
+						<h2>Do not trust Bosh</h2>
+						<pre class="stretch"><code class="hljs" data-trim>
+Started prepare for update
+Started prepare for update > Delete stemcell. Done (00:00:26)
+
+Started deploy micro bosh
+Started deploy micro bosh > Unpacking stemcell. Done (00:00:00)
+Started deploy micro bosh > Uploading stemcell. Done (00:00:00)
+Started deploy micro bosh > Creating VM from ami-e1577396 light. Done (00:00:33)
+Started deploy micro bosh > Waiting for the agent
+log writing failed. can't be called from trap context
+/Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/buffered_io.rb:65:in `recv': Connection reset by peer - recvfrom(2) (Errno::ECONNRESET)
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/buffered_io.rb:65:in `fill'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/packet_stream.rb:104:in `block in next_packet'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/packet_stream.rb:95:in `loop'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/packet_stream.rb:95:in `next_packet'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/session.rb:184:in `block in poll_message'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/session.rb:179:in `loop'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/session.rb:179:in `poll_message'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/transport/session.rb:164:in `next_message'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/session.rb:95:in `block in next_message'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/session.rb:94:in `loop'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/session.rb:94:in `next_message'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/methods/publickey.rb:53:in `authenticate_with'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/methods/publickey.rb:20:in `block in authenticate'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/key_manager.rb:122:in `block in each_identity'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/key_manager.rb:119:in `each'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/key_manager.rb:119:in `each_identity'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/methods/publickey.rb:19:in `authenticate'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/session.rb:79:in `block in authenticate'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/session.rb:66:in `each'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh/authentication/session.rb:66:in `authenticate'
+  from /Users/deejay/.gem/ruby/2.1.3/gems/net-ssh-2.10.0.beta1/lib/net/ssh.rb:226:in `start'
+						</code></pre>
+ 					</section>
+					<section>
 						<h2>Of course I'm sure</h2>
 						<pre><code class="hljs" data-trim>
 $ bosh deploy
